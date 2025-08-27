@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear Local Storage</title>
+    <script>
+        function clearLocalStorage() {
+            localStorage.removeItem('hms-user');
+            localStorage.removeItem('hms-session-timeout');
+            localStorage.removeItem('hms-login-time');
+            localStorage.removeItem('hms-token');
+            sessionStorage.clear();
+            alert('Local storage cleared! Please refresh your main application tab.');
+        }
+    </script>
+</head>
+<body>
+    <h1>Clear Local Storage</h1>
+    <button onclick="clearLocalStorage()">Clear HMS Local Storage</button>
+    <p>After clicking, refresh your main application tab and log in again.</p>
+</body>

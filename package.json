@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "recharts": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/recharts": "^1.8.29"
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check LocalStorage</title>
+    <script>
+        function checkLocalStorage() {
+            const token = localStorage.getItem('hms-token');
+            const user = localStorage.getItem('hms-user');
+            
+            document.getElementById('token').textContent = token ? 'Token: ' + token : 'No token found';
+            document.getElementById('user').textContent = user ? 'User: ' + user : 'No user found';
+        }
+        
+        function clearLocalStorage() {
+            localStorage.removeItem('hms-token');
+            localStorage.removeItem('hms-user');
+            alert('LocalStorage cleared!');
+            checkLocalStorage();
+        }
+    </script>
+</head>
+<body onload="checkLocalStorage()">
+    <h1>LocalStorage Check</h1>
+    <div id="token"></div>
+    <div id="user"></div>
+    <button onclick="checkLocalStorage()">Refresh</button>
+    <button onclick="clearLocalStorage()">Clear LocalStorage</button>
+</body>
+</html>
